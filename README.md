@@ -62,11 +62,14 @@ To run your application locally:
 npm run start
 ```
 
-Your application will be running at `http://localhost:3000`.  You can access the `/health` and `/appmetrics-dash` endpoints at the host.
+Your application will be running at `http://localhost:3000`. You can access the `/health` and `/appmetrics-dash` endpoints at the host.
 
 <!--#### IBM Cloud Developer Tools
 
-Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by using the following installation command: `curl -sL https://ibm.biz/idt-installer | bash`.
+Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following command:
+```
+curl -sL https://ibm.biz/idt-installer | bash
+```
 
 Your application will be compiled with Docker containers. To compile and run your app, run:
 
@@ -90,12 +93,14 @@ ibmcloud dev debug
 ```-->
 
 ##### Session Store
-You may see this warning when running `bx dev run`:
+
+You may see this warning when running `ibmcloud dev run`:
 ```
 Warning: connect.session() MemoryStore is not
 designed for a production environment, as it will leak
 memory, and will not scale past a single process.
 ```
+
 When deploying to production, it is best practice to configure sessions to be stored in an external persistence service.
 
 ## Next Steps
