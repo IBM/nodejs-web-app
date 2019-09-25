@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="http://kitura.io/">
+    <a href="https://cloud.ibm.com">
         <img src="https://landscape.cncf.io/logos/ibm-cloud-kcsp.svg" height="100" alt="IBM Cloud">
     </a>
 </p>
@@ -48,7 +48,7 @@ To get started building this application locally, you can either run the applica
 
 #### Native Application Development
 
-- Install the latest [Node.js](https://nodejs.org/en/download/) 6+ LTS version.
+- Install the latest [Node.js](https://nodejs.org/en/download/) 10+ LTS version.
 
 Once the Node toolchain has been installed, you can download the project dependencies with:
 
@@ -64,12 +64,20 @@ npm run start
 
 Your application will be running at `http://localhost:3000`. You can access the `/health` and `/appmetrics-dash` endpoints at the host.
 
-<!--#### IBM Cloud Developer Tools
+#### IBM Cloud Developer Tools
 
 Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following command:
 ```
 curl -sL https://ibm.biz/idt-installer | bash
 ```
+
+Create an application on IBM Cloud by running:
+
+```bash
+ibmcloud dev create
+```
+
+This will create and download a starter application with the necessary files needed for local development and deployment.
 
 Your application will be compiled with Docker containers. To compile and run your app, run:
 
@@ -78,11 +86,11 @@ ibmcloud dev build
 ibmcloud dev run
 ```
 
-This will launch your application locally. When you are ready to deploy to IBM Cloud on Cloud Foundry or Kubernetes, run one of the commands below:
+This will launch your application locally. When you are ready to deploy to IBM Cloud on Cloud Foundry or Kubernetes, run one of the following commands:
 
 ```bash
-ibmcloud dev deploy -t buildpack
-ibmcloud dev deploy -t container
+ibmcloud dev deploy -t buildpack // to Cloud Foundry
+ibmcloud dev deploy -t container // to K8s cluster
 ```
 
 You can build and debug your app locally with:
@@ -90,7 +98,7 @@ You can build and debug your app locally with:
 ```bash
 ibmcloud dev build --debug
 ibmcloud dev debug
-```-->
+```
 
 ##### Session Store
 
